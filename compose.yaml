@@ -1,0 +1,11 @@
+services:
+  questdb:
+    image: 'questdb/questdb:8.0.0'
+    environment:
+      - 'QDB_PG_PASSWORD=secret'
+      - 'QDB_PG_USER=myuser'
+    volumes:
+      - './datastore/questdb:/var/lib/questdb'
+    ports:
+      - '8812:8812' # for the Postgres wire protocol
+      - '9000:9000' # for the REST API and the Web Console

@@ -1,0 +1,11 @@
+spring.application.name: questdb
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:8812/qdb
+    username: myuser
+    password: secret
+    driver-class-name: org.postgresql.Driver
+  sql:
+    init:
+      mode: always
